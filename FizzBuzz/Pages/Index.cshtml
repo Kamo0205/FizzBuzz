@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "FizzBuzz";
+}
+<h1>The FizzBuzz results on numbers from 1 to 100</h1>
+<ul class="listtop">
+    @for (int i = 1; i < 101; i++)
+    {
+        string output = "";
+        if (i % 3 == 0)
+            output += "Fizz";
+        if (i % 5 == 0)
+            output += "Buzz";
+        if (output == "")
+            output = i.ToString();
+        <li class="fizznum"><h1>@output</h1></li>
+    }
+</ul>
